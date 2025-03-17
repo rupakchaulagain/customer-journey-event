@@ -4,8 +4,8 @@ spring:
   datasource:
     databaseDriverName: com.mysql.cj.jdbc.Driver
     url: 'jdbc:mysql://localhost:3306/customer_journey?serverTimezone=Asia/Kathmandu'
-    username:
-    password:
+    username: rupak
+    password: rupak
     maxPool: 5
     maxIdle: 4
     minIdle: 0

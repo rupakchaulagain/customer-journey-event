@@ -1,18 +1,16 @@
 package com.customerjourneyevent.event;
 
 import com.customerjourneyevent.entity.CustomerJourney;
+import com.customerjourneyevent.repository.CustomerJourneyRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
-import com.customerjourneyevent.repository.CustomerJourneyRepository;
 
 @Component
+@RequiredArgsConstructor
 public class CustomerJourneyEventListener {
 
     private final CustomerJourneyRepository journeyRepository;
-
-    public CustomerJourneyEventListener(CustomerJourneyRepository journeyRepository) {
-        this.journeyRepository = journeyRepository;
-    }
 
     @EventListener
     public void handleCustomerJourneyEvent(CustomerJourneyEvent event) {
